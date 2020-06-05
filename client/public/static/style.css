@@ -1,0 +1,40 @@
+
+
+
+h1{
+	font-family: 'Anton', sans-serif !important;
+}
+h2{
+   font-family: 'Anton', sans-serif !important;
+}
+}
+h3{
+	font-family: 'Anton', sans-serif !important;
+}
+}
+h4{
+font-family: 'Anton', sans-serif !important;
+}
+}
+h5{
+font-family: 'Anton', sans-serif !important;
+}
+}
+h6{
+	font-family: 'Anton', sans-serif !important;
+}
+p{
+	font-family: 'Lato', sans-serif;
+
+}
+
+.shadow1{
+     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.BG{
+	background-image:url("/staic/img.jpg"); ;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	
+}
