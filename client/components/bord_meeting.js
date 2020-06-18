@@ -5,18 +5,18 @@ import Button from '@material-ui/core/Button';
 
 function Meeting() {
     return (
-        <div className="card container col-12 col-sm-3 card-1 m-5" style={{backgroundImage: "url('/static/img.jpg')"}}>
+        <div  className="card container col-12 col-sm-4 card-1 m-5" style={{backgroundImage: "url('/static/img.jpg')"}} >
           <div className="row justijy justify-content-center align-items-end">
             <div className="text-center col-12 bg">
                 <h3>
                    Meeting: Home repairs
                 </h3>
                 <h4>Time: TBD | Location: TBD</h4>
-                <h5 className="more">
+                <p className="more p-2">
                     Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                     across all continents except Antarctica
-                </h5>
-                <Button className=" m-3 button" size="large" variant="containd" style={{ backgroundColor:'#fff',color:"black" ,transition: '1s '}}>
+                </p>
+                <Button className=" m-2 button" size="large" variant="contained" style={{ backgroundColor:'#fff',color:"black" ,transition: '1s '}}>
                     RSVP
                 </Button>
             </div>
@@ -24,11 +24,11 @@ function Meeting() {
           <style jsx>{`
             div:hover .bg{
                 background: rgba(0, 0, 0, 0.8);
-                height:70%;
+                height:50%;
              }   
             .bg{
                 background: rgba(0, 0, 0, 0.8);
-                height:40%;
+                height:35%;
                 transition: all .4s cubic-bezier(.25,.8,.25,1);
                 
             }

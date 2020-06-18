@@ -1,6 +1,12 @@
 import graphene
+import content.schema
+import content.models
 
-class Query(graphene.ObjectType):
+class Query(content.schema.Query,graphene.ObjectType):
     pass
 
-schema = graphene.Schema(query=Query)
+
+
+class Mutation(content.schema.Mutation,graphene.ObjectType):
+    pass
+schema = graphene.Schema(query=Query,mutation=Mutation)

@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     'django.contrib.staticfiles', # Required for GraphiQL
-    'graphene_django'
+    'graphene_django',
+    'content'
 ]
 
 MIDDLEWARE = [
@@ -123,3 +123,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = ' 470.sugar.hill@gmail.com'
+EMAIL_HOST_PASSWORD ='uwjxrqqcgnchkanh'

@@ -7,12 +7,12 @@ export default function Footer() {
 return(
 	<div className="container-fluid" >
         <div className="row justify-content-center p-5"> 
-            <h3>©2020 by HFDC 470 West 146 Street.</h3>
+            <h4>©2020 by HFDC 470 West 146 Street.</h4>
         </div>
         <style jsx>{`
             .container-fluid{
-                background-color:black;
-                color:#fff;
+                background-color:#000;
+                color:#06020;
             }
         `}</style>
     </div>

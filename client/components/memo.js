@@ -14,7 +14,7 @@ return(
              <div className=" bg container-fluid">
                 <div className="row  bk align-items-center justify-content-center">
                 <div className="row bg-text align-items-center justify-content-center">
-                    <div className="p-3">
+                    <div className="p-5">
                         <h1>The Board</h1>
                         <p>​ 
                             To all shareholders: <br/>
@@ -26,9 +26,9 @@ return(
                             Only emergency repairs will be done.<br/><br/>
                             For your convenience the courtyard will be open from<br/>
                             9am until 9pm, please keep the court yard<br/>
-                            clean and maintain social distance and wear a mask.<br/>
-                            Stay safe <br/>
-                            Thank you <br/>
+                            clean and maintain social distance and wear a mask.<br/><br/>
+                            Stay safe, <br/>
+                            Thank you, <br/>
                             The Board
                         </p>
                     </div>
@@ -41,7 +41,7 @@ return(
          
         <style jsx>{`
         	.bg{
-        		height:50vh;
+        		height:70vh;
         	}
             .bk{
                 height:100%;
@@ -53,7 +53,7 @@ return(
             
             .bg-text{
                 background: black;
-                min-height 40vh;
+                min-height 60vh;
                 width:100vw;
 
             }

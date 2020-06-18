@@ -1,0 +1,104 @@
+
+# Import Django model class
+from coffeehouse.stores.models import Store
+
+# Create model Store instances
+store_corporate = Store(name='Corporate',address='624 Broadway',
+city ='San Diego',state='CA',email='corporate@coffeehouse.com')
+store_downtown = Store(name='Downtown',address='Horton Plaza',
+city ='San Diego',state='CA',email='downtown@coffeehouse.com')
+store_uptown = Store(name='Uptown',address='240 University Ave',
+city ='San Diego',state='CA',email='uptown@coffeehouse.com')
+store_midtown = Store(name='Midtown',address='784 W Washington St',
+city ='San Diego',state='CA',email='midtown@coffeehouse.com')
+
+# Create store list
+store_list = [store_corporate,store_downtown,store_uptown,store_midtown]
+
+# Call bulk_create to create records in a single call
+Store.objects.bulk_create(store_list)
+
+
+
+
+
+obj = Foo.objects.get(pk=<some_existing_pk>)
+obj.pk = None
+obj.save()   
+
+
+query
+store_list_to_update = Store.objects.in_bulk()
+
+
+
+#atomic
+# Import Django model class
+from .models import Class, Class_Day
+from django.db import transaction
+
+
+# new class
+with transaction.atomic():
+	new_class = Class(name='Cheddar Talk', day_count=day_count)
+	new_class.save()
+	class_id = new_id.id
+	order = 0
+	for x in range(day_count):    
+		new_class_day = Class_Day(order=order, day_count=day_count)
+		order = order + 1
+		new_class_day.save()
+
+# new course
+with transaction.atomic():
+	new_course = Course(name='Cheddar Talk', day_count=day_count)
+	new_course.save()
+	course_id = new_course.id
+	order = 0
+	for x in range(day_count):    
+		new_course_day = Course_Day(order=order, day_count=day_count)
+		new_course_day.order = order + 1
+		new_course_day.course_id = course_id
+		new_course_day.save()
+
+
+
+
+
+
+# new class from class
+with transaction.atomic():
+	new_class = Class.objects.get(id=id)
+	new_class.pk = None
+	new_class.id = None
+	new_class_id = new_class.id
+	new_class.save()
+    class_day_list = Class_Day.objects.select_for_update().filter(class_id=id)
+    # Loop over each store to update and invoke save() on each entry
+    for class_day in class_day_list
+        # Add complex update logic here for each store
+        class_day.pk = None
+        class_day.id = None
+        class_day.class_id = new_id
+        # save() method called on each member to update
+        class_day.save()
+
+
+# new course from course
+with transaction.atomic():
+    new_course = Course.objects.get(id=id)
+	new_course.pk = None
+	new_course.id = None
+	new_course.vr = new_course.vr + 1
+	course_id = new_course.id
+	new_course.save()
+    course_day_list = Course_Day.objects.select_for_update().filter(course_id=id)
+    # Loop over each store to update and invoke save() on each entry
+    for course_day in course_day_list
+        # Add complex update logic here for each store
+        course_day.pk = None
+        course_day.id = None
+        course_day.course_id = course_id
+        # save() method called on each member to update
+        course_day.save()
+

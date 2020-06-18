@@ -15,7 +15,6 @@ class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
           <link rel="icon" href="/static/pwa.png" type="image/gif" sizes="16x16"/>
           <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital,wght@0,400;1,300&display=swap" rel="stylesheet"/>
-          <link href="/static/style.css" rel="stylesheet"/>
         </Head>
         <body>
           <Main />

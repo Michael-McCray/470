@@ -1,21 +1,14 @@
 // import App from 'next/app'
 import '../public/bootstrap/css/bootstrap.min.css';
+import { ClientContext } from 'graphql-hooks';
+import { useGraphQLClient } from '../lib/graphql-client';
+import"../public/static/style.css";
 
-
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function MyApp({ Component, pageProps }) {
+	const graphQLClient = useGraphQLClient(pageProps.initialGraphQLState)
+	return (
+		<ClientContext.Provider value={graphQLClient}>
+      		<Component {...pageProps} />
+    	</ClientContext.Provider>
+	)    
 }
-
-// Only uncomment this method if you have blocking data requirements for
-// every single page in your application. This disables the ability to
-// perform automatic static optimization, causing every page in your app to
-// be server-side rendered.
-//
-// MyApp.getInitialProps = async (appContext) => {
-//   // calls page's `getInitialProps` and fills `appProps.pageProps`
-//   const appProps = await App.getInitialProps(appContext);
-//
-//   return { ...appProps }
-// }
-
-export default MyApp

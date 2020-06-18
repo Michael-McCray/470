@@ -1,5 +1,6 @@
-
-
+html { font-size: calc(.5em + .5vw); scroll-behavior: smooth;  }
+button { font-size: inherit }
+input { font-size: inherit }
 
 h1{
 	font-family: 'Anton', sans-serif !important;
@@ -7,19 +8,19 @@ h1{
 h2{
    font-family: 'Anton', sans-serif !important;
 }
-}
+
 h3{
 	font-family: 'Anton', sans-serif !important;
 }
-}
+
 h4{
 font-family: 'Anton', sans-serif !important;
 }
-}
+
 h5{
 font-family: 'Anton', sans-serif !important;
 }
-}
+
 h6{
 	font-family: 'Anton', sans-serif !important;
 }
@@ -38,3 +39,7 @@ p{
 	background-repeat: no-repeat;
 	
 }
+ 
+ .MuiLabelBase-root {
+                color:#fff !important;
+            }
