@@ -5,6 +5,8 @@ import Meetings from "../components/bord_meeting";
 import Memo from "../components/memo";
 import Footer from "../components/footer";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
 
 export default function Index() {
   return(
@@ -13,7 +15,7 @@ export default function Index() {
 	   		<Home/>
 	   		<div className="container-fluid p-5 bg">
 	   			<div className="row justify-content-center align-content-center">
-	   				<ExpandMoreIcon style={{ fontSize: 50 }}/>
+	   				<AnchorLink  href='#featured'><ExpandMoreIcon style={{ fontSize: 50 }}/></AnchorLink>
 	   			</div>
 	   		</div>
 	   		<Attention/>

@@ -69,7 +69,7 @@ const handleClose = () => {
     setOpen(false);
 };
 return(
-	<div className="shadow1 p-0"> 
+	<div  id='home'className="shadow1 p-0"> 
     <Parallax
             
             bgImage={'/static/img.jpg'}
@@ -168,7 +168,7 @@ return(
                   </div>
                 </Fade>
               </Modal>
-               </ThemeProvider>
+            </ThemeProvider>
         </Parallax>
          
          

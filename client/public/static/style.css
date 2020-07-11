@@ -43,3 +43,25 @@ p{
  .MuiLabelBase-root {
                 color:#fff !important;
             }
+
+ .MuiDrawer-paper {
+	min-width: 20vw;
+	padding-right: 60px;
+	padding-left: 30px;
+	padding-top: 30px;
+	background-color: #212121 !important;
+}
+
+a:link, a:visited {
+  	font-family: 'Anton', sans-serif !important;
+	font-size: 20px;
+	color: #fff;
+	font-weight: 200;
+	text-decoration: none;
+	display: block;
+}
+
+a:hover, a:active {
+
+	color: #f50057;
+}

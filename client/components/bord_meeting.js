@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 
 function Meeting() {
     return (
-        <div  className="card container col-12 col-sm-4 card-1 m-5" style={{backgroundImage: "url('/static/img.jpg')"}} >
+        <div  id='meetings' className="card container col-12 col-sm-4 card-1 m-5" style={{backgroundImage: "url('/static/img.jpg')"}} >
           <div className="row justijy justify-content-center align-items-end">
             <div className="text-center col-12 bg">
                 <h3>

@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -19,20 +21,10 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import jump from 'jump.js'
+import Contact_Me from './contact';
 
 
-const useStyles = makeStyles({
-  list: {
-    width: 250,
-  },
-  fullList: {
-    width: 'auto',
-  },
-});
 
 
 
@@ -69,7 +61,7 @@ ScrollTop.propTypes = {
 
 
 export default function Nav(props) {
-  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
   const [state, setState] = React.useState({   
     left: false,
   });
@@ -82,25 +74,14 @@ export default function Nav(props) {
     setState({ ...state, [anchor]: open });
   };
 
+  const handleOpen = () => {
+      setOpen(true);
+  };
 
-  const list = (anchor) => (
-    <div
-      className={clsx(classes.list, {
-        [classes.fullList]: anchor === 'top' || anchor === 'bottom',
-      })}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-     <Divider />
-      <List>
-          <ListItem button onClick={jump('.target')}>
-            <a href="#section2"><ListItemText> hjvhvkhvkvhvhkv </ListItemText></a>
-          </ListItem>
-      </List>
-     
-    </div>
-  );
+  const handleClose = () => {
+      setOpen(false);
+  };
+
 
   return (
     <React.Fragment>
@@ -116,13 +97,30 @@ export default function Nav(props) {
             open={state['left']}
             onClose={toggleDrawer('left', false)}
             onOpen={toggleDrawer('left', true)}
-          >
-            {list('left')}
+            
+             style={{width:"40vw"}}
+      >
+            <Divider />
+      <List>
+          <ListItem button>
+            <ListItemText> <AnchorLink offset='180' href='#featured'>Featured</AnchorLink> </ListItemText>
+            </ListItem>
+          <ListItem button>
+            <ListItemText> <AnchorLink offset='180' href='#meetings'>Meetings and events</AnchorLink> </ListItemText>
+            </ListItem>
+          <ListItem button>
+            <ListItemText> <AnchorLink offset='180' href='#memo'>A Message From The Board</AnchorLink> </ListItemText>
+          </ListItem>
+
+            <Button className="m-4 button" size="large" variant="outlined" style={{ borderColor:'#fff',color:"#fff" }} onClick={handleOpen}>
+                Contact us
+            </Button>
+      </List>
     </SwipeableDrawer>
-    
+    <AnchorLink offset='180' href='#home'>
     <h4  className="ml-2" style={{ letterSpacing: ".1px",fontFamily: "'Anton', sans-serif !important"}}>
       HFDC 470 WEST 146 STREET
-    </h4>
+    </h4></AnchorLink>
   </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
@@ -132,9 +130,21 @@ export default function Nav(props) {
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>
+
+      <Contact_Me handleClose={handleClose} handleOpen={handleOpen} open={open}/>      
+
+      <style jsx>{`
+                
+                  .button{
+                      background-color:#fff;
+                  }
+                
+      `}</style>
+
     </React.Fragment>
   );
 }
+
 
 
 

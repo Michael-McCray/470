@@ -4,7 +4,7 @@ import { Parallax, Background } from 'react-parallax';
 
 export default function Memo() {
 return(
-	<div className=" p-0"> 
+	<div  id='memo' className=" p-0"> 
     <Parallax
             
             bgImage={'/static/img.jpg'}
@@ -52,7 +52,7 @@ return(
             }
             
             .bg-text{
-                background: black;
+                background:#212121;
                 min-height 60vh;
                 width:100vw;
 

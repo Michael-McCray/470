@@ -32,7 +32,7 @@ export default function Attention() {
   }, [open]);
 
 return(
-	<div className="container-fluid shadow1" >
+	<div  id='featured' className="container-fluid shadow1" >
         <div className="row"> 
             <div className="col-sm-6 col-9 bg2">
                 <div className="row justify-content-center align-items-center p-5"> 

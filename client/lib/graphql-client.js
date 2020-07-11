@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { GraphQLClient } from 'graphql-hooks'
 import memCache from 'graphql-hooks-memcache'
 
+
 let graphQLClient
 
 function createClient(initialState) {
